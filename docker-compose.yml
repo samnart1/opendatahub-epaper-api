@@ -33,6 +33,10 @@ services:
       POSTGRES_USER: epaper
       POSTGRES_PASSWORD: epaper
     hostname: postgres
+    networks:
+      default:
+        aliases:
+         - postgresql
     volumes:
       - epaper-psql:/var/lib/postgresql/data
     ports:
